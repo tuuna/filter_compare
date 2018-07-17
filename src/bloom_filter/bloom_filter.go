@@ -1,16 +1,24 @@
 package main
 
 import (
+	"os"
+	"log"
+	"fmt"
+
+	"compress/gzip"
+	"encoding/gob"
+
+	"github.com/pkg/errors"
 	"github.com/gomodule/redigo/redis"
 	"crypto/sha256"
 	"github.com/spaolacci/murmur3"
-	"os"
-	"log"
-	"github.com/pkg/errors"
-	"compress/gzip"
-	"encoding/gob"
-	"fmt"
 )
+
+/*
+初始化时，需要一个长度为n比特的数组，每个比特位初始化为0，需要k个hash函数，每个函数可以把key散列到数组的k个位置。
+当某个key加入集合时，用k个hash函数计算出k个散列值，并把数组中对应的比特位置为1；当判断某个key是否在集合时，用k个hash函数计算出k个散列值，并查询数组中对应的比特位，如果所有的比特位都是1，认为在集合中。
+但是此时可能存在误报的情况，即所有这些位置是在其他元素插入过程中被偶然置为1了，导致了一次“误报”。
+ */
 
 /*
 interface to explode functions such as
@@ -18,10 +26,10 @@ put bytes,put string, find byte, find string and close
  */
 type BloomFilter interface {
 	Put([]byte)
-	//PutString(string)
+	PutString(string)
 
 	Has([]byte) bool
-	//HasString(string) bool
+	HasString(string) bool
 
 	Close()
 }
@@ -45,15 +53,20 @@ type RedisBloomFilter struct {
 	k   uint
 }
 
+/*
+key hash
+ */
 func HashData(data []byte, seed uint) uint {
-	sha_data := sha256.Sum256(data)
-	data = sha_data[:]
+	shaData := sha256.Sum256(data)
+	data = shaData[:]
 	m := murmur3.New64WithSeed(uint32(seed))
 	m.Write(data)
 	return uint(m.Sum64())
 }
 
-// NewMemoryBloomFilter 创建一个内存的bloom filter
+/*
+create a memory bloom filter
+ */
 func NewMemoryBloomFilter(n uint, k uint) *MemoryBloomFilter {
 	return &MemoryBloomFilter{
 		k:  k,
@@ -61,7 +74,9 @@ func NewMemoryBloomFilter(n uint, k uint) *MemoryBloomFilter {
 	}
 }
 
-// Put 添加一条记录
+/*
+compute hash value with capacity of k
+ */
 func (filter *MemoryBloomFilter) Put(data []byte) {
 	l := uint(len(filter.bs))
 	for i := uint(0); i < filter.k; i++ {
@@ -70,9 +85,9 @@ func (filter *MemoryBloomFilter) Put(data []byte) {
 }
 
 // Put 添加一条string记录
-/*func (filter *MemoryBloomFilter) PutString(data string) {
+func (filter *MemoryBloomFilter) PutString(data string) {
 	filter.Put([]byte(data))
-}*/
+}
 
 // Has 推测记录是否已存在
 func (filter *MemoryBloomFilter) Has(data []byte) bool {
@@ -88,22 +103,20 @@ func (filter *MemoryBloomFilter) Has(data []byte) bool {
 }
 
 // Has 推测记录是否已存在
-/*func (filter *MemoryBloomFilter) HasString(data string) bool {
+func (filter *MemoryBloomFilter) HasString(data string) bool {
 	return filter.Has([]byte(data))
-}*/
+}
 
 // Close 关闭bloom filter
 func (filter *MemoryBloomFilter) Close() {
 	filter.bs = nil
 }
 
-// NewFileBloomFilter 创建一个以文件为存储介质的bloom filter
-// target 文件保存处
-// 本质上就是增加了MemoryBloomFilter, 在创建时打开文件, 在Close时保存文件
+
 func NewFileBloomFilter(target string, n uint, k uint) *FileBloomFilter {
-	memory_filter := NewMemoryBloomFilter(n, k)
+	memoryFilter := NewMemoryBloomFilter(n, k)
 	filter := &FileBloomFilter{
-		memory_filter, target,
+		memoryFilter, target,
 	}
 	filter.reStore()
 
@@ -122,10 +135,10 @@ func (filter *FileBloomFilter) store() {
 	}
 	defer f.Close()
 
-	gzip_writer := gzip.NewWriter(f)
-	defer gzip_writer.Close()
+	gzipWriter := gzip.NewWriter(f)
+	defer gzipWriter.Close()
 
-	encoder := gob.NewEncoder(gzip_writer)
+	encoder := gob.NewEncoder(gzipWriter)
 	err = encoder.Encode(filter.bs)
 	if err != nil {
 		log.Fatalf("%+v", errors.Wrap(err, "gzip"))
@@ -142,12 +155,12 @@ func (filter *FileBloomFilter) reStore() {
 	}
 	defer f.Close()
 
-	gzip_reader, err := gzip.NewReader(f)
+	gzipReader, err := gzip.NewReader(f)
 	if err != nil {
 		log.Fatalf("%+v", errors.Wrap(err, "Ungzip"))
 	}
 
-	decoder := gob.NewDecoder(gzip_reader)
+	decoder := gob.NewDecoder(gzipReader)
 	err = decoder.Decode(&filter.bs)
 	if err != nil {
 		log.Fatalf("%+v", errors.Wrap(err, "gob decode"))
@@ -163,10 +176,10 @@ func NewRedisBloomFilter(cli redis.Conn, n, k uint) *RedisBloomFilter {
 	length, _ := redis.Int64(cli.Do("LLEN", filter.redisKey()))
 	if uint(length) != n {
 		bs := make([]interface{}, n)
-		push_args := []interface{}{filter.redisKey()}
-		push_args = append(push_args, bs...)
+		pushArgs := []interface{}{filter.redisKey()}
+		pushArgs = append(pushArgs, bs...)
 		cli.Do("DEL", filter.redisKey())
-		cli.Do("LPUSH", push_args...)
+		cli.Do("LPUSH", pushArgs...)
 	}
 
 	return filter
