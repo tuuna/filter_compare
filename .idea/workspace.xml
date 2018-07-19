@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7be09e5-7acf-4bb6-9051-c18255848071" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cuckoo_filter/bucket.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cuckoo_filter/cuckoo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cuckoo_filter/cuckoo_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cuckoo_filter/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bloom_filter/bloom_filter.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/bloom_filter/bloom_filter.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bloom_filter/bloom_filter_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/bloom_filter/bloom_filter_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,31 +18,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bloom_filter.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bloom_filter/bloom_filter.go">
+      <file leaf-file-name="cuckoo.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/cuckoo.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="223" lean-forward="true" selection-start-line="223" selection-end-line="223" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bitset.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bloom_filter/bitset.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bloom_filter_test.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bloom_filter/bloom_filter_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+            <state relative-caret-position="212">
+              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
               <folding>
-                <element signature="e#21#93#0" expanded="true" />
+                <element signature="e#14#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/util.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <folding>
+                <element signature="e#14#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bucket.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/bucket.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cuckoo_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/cuckoo_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
+              <folding>
+                <element signature="e#14#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,6 +100,13 @@
         <option value="$PROJECT_DIR$/src/bloom_filter/bitset.go" />
         <option value="$PROJECT_DIR$/src/bloom_filter/bloom_filter.go" />
         <option value="$PROJECT_DIR$/src/bloom_filter/bloom_filter_test.go" />
+        <option value="$PROJECT_DIR$/src/cuckoo_filter/test.go" />
+        <option value="$PROJECT_DIR$/src/cuckoo_filter/util.go" />
+        <option value="$PROJECT_DIR$/src/cuckoo_filter/bucket.go" />
+        <option value="$PROJECT_DIR$/src/cuckoo_filter/cuckoo_test.go" />
+        <option value="$PROJECT_DIR$/src/cuckoo_filter/testAll.go" />
+        <option value="$PROJECT_DIR$/src/cuckoo_filter/cuckoo.go" />
+        <option value="$PROJECT_DIR$/src/test.go" />
       </list>
     </option>
   </component>
@@ -85,10 +119,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="970" />
+    <option name="width" value="950" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -97,7 +131,25 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="filter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
@@ -124,19 +176,97 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Go Build.go build test.go (1)">
+    <configuration name="go build cuckoo.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="filter" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/cuckoo_filter/cuckoo.go" />
+      <package value="filter" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build testAll.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="filter" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/cuckoo_filter/testAll.go" />
+      <package value="filter" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build test.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="filter" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/test.go" />
+      <package value="filter" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="TestEncodeDecode in filter/src/cuckoo_filter" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="filter" />
+      <working_directory value="$PROJECT_DIR$/src/cuckoo_filter" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="filter/src/cuckoo_filter" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestEncodeDecode$" />
+    </configuration>
+    <configuration name="TestInsertion in filter/src/cuckoo_filter" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="filter" />
+      <working_directory value="$PROJECT_DIR$/src/cuckoo_filter" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="filter/src/cuckoo_filter" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestInsertion$" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build cuckoo.go" />
+      <item itemvalue="Go Test.TestEncodeDecode in filter/src/cuckoo_filter" />
+      <item itemvalue="Go Test.TestInsertion in filter/src/cuckoo_filter" />
+      <item itemvalue="Go Build.go build testAll.go" />
+      <item itemvalue="Go Build.go build test.go (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build test.go (1)" />
+        <item itemvalue="Go Build.go build testAll.go" />
+        <item itemvalue="Go Build.go build cuckoo.go" />
+        <item itemvalue="Go Test.TestInsertion in filter/src/cuckoo_filter" />
+        <item itemvalue="Go Test.TestEncodeDecode in filter/src/cuckoo_filter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestMemoryBloomFilter_in_filter_src_bloom_filter - 2018.07.17 at 14h 19m 44s.xml">
+      <configuration name="TestMemoryBloomFilter in filter/src/bloom_filter" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestEncodeDecode_in_filter_src_cuckoo_filter - 2018.07.19 at 15h 13m 14s.xml">
+      <configuration name="TestEncodeDecode in filter/src/cuckoo_filter" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestInsertion_in_filter_src_cuckoo_filter - 2018.07.19 at 15h 13m 52s.xml">
+      <configuration name="TestInsertion in filter/src/cuckoo_filter" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26666668" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1296875" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28218883" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.20493563" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -155,6 +285,43 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/cuckoo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding>
+            <element signature="e#14#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/bucket.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/cuckoo_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding>
+            <element signature="e#14#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bloom_filter/bloom_filter.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1612">
@@ -166,9 +333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" selection-start-column="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#21#93#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -292,26 +456,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bloom_filter/bloom_filter_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bloom_filter/bitset.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
+        <state relative-caret-position="468">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bloom_filter/bloom_filter.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="223" lean-forward="true" selection-start-line="223" selection-end-line="223" />
+        <state relative-caret-position="539">
+          <caret line="222" column="1" lean-forward="true" selection-start-line="222" selection-start-column="1" selection-end-line="222" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bloom_filter/bloom_filter_test.go">
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        <state relative-caret-position="104">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/testAll.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/cuckoo_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
           <folding>
-            <element signature="e#21#93#0" expanded="true" />
+            <element signature="e#14#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/cuckoo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+          <folding>
+            <element signature="e#14#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/bucket.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cuckoo_filter/util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
